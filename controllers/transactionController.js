@@ -45,7 +45,7 @@ const deleteTransaction = async (req, res) => {
     await prisma.transaction.delete({
         where: { id }
     });
-    res.sendStatus(204).json({ message: 'Transaction deleted succesfuly' });;
+    res.sendStatus(204)
 };
 
 module.exports = { createTransaction, getTransactions, updateTransaction, deleteTransaction };
